@@ -1,0 +1,27 @@
+.title1 {
+	font-size: 62px;
+}
+
+.title2 {
+	font-size: 62px;
+	margin-top: -40px;
+}
+
+p {
+	font-family: "Georgia";
+	margin-left: 75px;
+}
+
+body {
+	background-color: #fffff0;
+}
+
+.title1 a {
+	color: #ff8e83;
+	text-decoration: none;
+}
+
+.title2 a {
+	color: #5fa2ff;
+	text-decoration: none;
+}

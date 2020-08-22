@@ -1,0 +1,33 @@
+p {
+	font-family: "CMU Serif";
+}
+
+body {
+	background-color: #fffff0;
+}
+
+div {
+	margin: 30px;
+}
+
+div.heading {
+	background-color: orange;
+	opacity: 100%;
+	width: 100px;
+	height: 100px;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 5px;
+	border-radius: 4px;
+}
+
+div.main-text {
+	line-height: 0.6;
+	margin-top: 35px;
+}
+
+div.main-text a {
+	color: #ff7066;
+	text-decoration: none;
+	font-size: 14pt;
+}
