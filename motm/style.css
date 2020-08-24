@@ -3,7 +3,7 @@ p {
 }
 
 body {
-	background-color: #fffff0;
+	background-color: #fcfaf5;
 }
 
 div {
@@ -22,12 +22,17 @@ div.heading {
 }
 
 div.main-text {
-	line-height: 0.6;
-	margin-top: 35px;
+	line-height: 0.4;
+	margin-top: 37px;
+	font-size: 16pt;
 }
 
-div.main-text a {
-	color: #e65d54;
+div.main-text a:link {
+	color: #ff8e83;
 	text-decoration: none;
-	font-size: 16pt;
+}
+
+div.main-text a:visited {
+	color: #5c1546;
+	text-decoration: none;
 }
