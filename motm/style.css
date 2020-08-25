@@ -1,5 +1,5 @@
 p {
-	font-family: "CMU Serif";
+	font-family: "Century";
 }
 
 body {
@@ -11,7 +11,7 @@ div {
 }
 
 div.heading {
-	background-color: orange;
+	background-color: white;
 	opacity: 100%;
 	width: 100px;
 	height: 100px;
@@ -28,7 +28,7 @@ div.main-text {
 }
 
 div.main-text a:link {
-	color: #ff8e83;
+	color: #e6675c;
 	text-decoration: none;
 }
 
