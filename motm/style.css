@@ -1,17 +1,12 @@
-p {
-	font-family: "Century";
+.main-text {
+	font-family: "Georgia";
 }
 
 body {
 	background-color: #fcfaf5;
 }
 
-div {
-	margin: 30px;
-}
-
-div.heading {
-	background-color: white;
+.home {
 	opacity: 100%;
 	width: 100px;
 	height: 100px;
@@ -19,20 +14,28 @@ div.heading {
 	border-color: #000000;
 	border-width: 5px;
 	border-radius: 4px;
+	margin: 30px;
 }
 
 div.main-text {
 	line-height: 0.4;
-	margin-top: 37px;
-	font-size: 16pt;
+	font-size: 14pt;
+	margin-left: 30px;
+	margin-top: -1px;
 }
 
 div.main-text a:link {
 	color: #e6675c;
-	text-decoration: none;
 }
 
 div.main-text a:visited {
 	color: #5c1546;
-	text-decoration: none;
+}
+
+td {
+	padding: 9px;
+}
+
+table {
+	margin-left: -10px;
 }
