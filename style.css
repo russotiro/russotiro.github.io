@@ -25,3 +25,12 @@ body {
 	color: #5fa2ff;
 	text-decoration: none;
 }
+
+footer {
+	margin-top: 600px;
+}
+
+footer a {
+	font-size: 12px;
+	font-family: "Times New Roman";
+}
