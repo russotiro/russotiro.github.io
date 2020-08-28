@@ -1,36 +1,26 @@
-.title1 {
-	font-size: 62px;
-}
-
-.title2 {
-	font-size: 62px;
-	margin-top: -40px;
-}
-
 p {
 	font-family: "Georgia";
 	margin-left: 75px;
+	line-height: 1.25;
+}
+
+p a {
+	text-decoration: none;
+	font-size: 62px;
 }
 
 body {
 	background-color: #fcfaf5;
 }
 
-.title1 a {
+p:first-child {
+	margin-top: 59px;
+}
+
+p:first-child a {
 	color: #ff8e83;
-	text-decoration: none;
 }
 
-.title2 a {
+p:nth-child(2) a {
 	color: #5fa2ff;
-	text-decoration: none;
-}
-
-footer {
-	margin-top: 600px;
-}
-
-footer a {
-	font-size: 12px;
-	font-family: "Times New Roman";
 }
