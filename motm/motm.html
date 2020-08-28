@@ -1,56 +1,19 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title>Music of the moment</title>
-  <link href="./style.css" type="text/css" rel="stylesheet">
-</head>
-
-<body>
-  <div>
-    <a href="../index.html"><img class="home" src="./home_icon.png" width="100px" height="100px"></a>
-  </div>
-  <div>
-    <table>
+---
+title: Music of the moment
+---
+<div>
+  <a href="../index.html"><img class="home" src="./home_icon.png" width="100px" height="100px"></a>
+</div>
+<div>
+  <table>
+    {% for track in site.data.motm-table %}
       <tr>
-        <td>8.21.20</td>
-        <td><a href="./music/hwhy noodling.m4a">HWHY noodling</a></td>
-        <td><a href="https://youtu.be/OnA5po3ASyI">(ref)</a></td>
+        <td>{{ track.date }}</td>
+        <td><a href="./music/{{ track.path }}">{{ track.title }}</a></td>
+          {% if track.ref %}
+            <td><a href="{{ track.ref }}">(ref)</a></td>
+          {% endif %}
       </tr>
-      <tr>
-        <td>8.4.20</td>
-        <td><a href="./music/Big B.m4a">Big B</a></td>
-      </tr>
-      <tr>
-        <td>7.29.20</td>
-        <td><a href="./music/right hand workout (1m31s for proof).m4a">Sounds like some F♯m shit</a></td>
-      </tr>
-      <tr>
-        <td>7.28.20</td>
-        <td><a href="./music/More minor upbeat.m4a">Minor, m11 feel</a></td>
-      </tr>
-      <tr>
-        <td>7.28.20</td>
-        <td><a href="./music/Lots of minor 4s in this one.m4a">Major, lots of iv-I</a></td>
-      </tr>
-      <tr>
-        <td>7.23.20</td>
-        <td><a href="./music/G to E.m4a">G to E</a></td>
-      </tr>
-      <tr>
-        <td>12.2.19</td>
-        <td><a href="./music/Short clip 3.m4a">Short clip 3</a></td>
-      </tr>
-      <tr>
-        <td>12.2.19</td>
-        <td><a href="./music/Short clip 2.m4a">Short clip 2</a></td>
-      </tr>
-      <tr>
-        <td>12.2.19</td>
-        <td><a href="./music/Short clip.m4a">Short clip</a></td>
-      </tr>
-    </table>
-  </div>
-</body>
-
-</html>
+    {% endfor %}
+  </table>
+</div>
