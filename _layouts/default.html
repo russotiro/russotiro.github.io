@@ -4,7 +4,9 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <link href="./style.css" type="text/css" rel="stylesheet">
+    {% for style in page.styles %}
+      <link href="/assets/css/{{ style }}.css" type="text/css" rel="stylesheet">
+    {% endfor %}
   </head>
 
   <body>

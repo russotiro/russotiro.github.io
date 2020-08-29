@@ -36,7 +36,7 @@
   - date: 7.3.20
     title: Birthday
     path: Birthday.m4a
-    ref: ./birth/birth.html
+    ref: ./birth.html
 
   - date: 3.21.20
     title: Melodic line
