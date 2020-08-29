@@ -10,7 +10,7 @@ styles:
     {% for track in site.data.motm-table %}
       <tr>
         <td>{{ track.date }}</td>
-        <td><a href="./music/{{ track.path }}">{{ track.title }}</a></td>
+        <td><a href="/assets/mus/{{ track.path }}">{{ track.title }}</a></td>
           {% if track.ref %}
             <td><a href="{{ track.ref }}">(ref)</a></td>
           {% endif %}
