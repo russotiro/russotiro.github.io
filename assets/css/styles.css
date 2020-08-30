@@ -15,6 +15,23 @@ body {
 	margin: 30px;
 }
 
+/* 404 */
+
+.p404 {
+	font-family: "Georgia";
+	text-align: center;
+}
+
+.p404 h2 {
+	font-size: 96px;
+	margin-top: 15%;
+}
+
+.p404 p {
+	font-size: 18px;
+	line-height: 1;
+}
+
 /* Titles on home page */
 
 h1 {
