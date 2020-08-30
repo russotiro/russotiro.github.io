@@ -1,0 +1,68 @@
+/* Intended for many/most/all pages */
+
+body {
+	background-color: #fcfaf5;
+}
+
+.home {
+	opacity: 100%;
+	width: 100px;
+	height: 100px;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 5px;
+	border-radius: 4px;
+	margin: 30px;
+}
+
+/* Titles on home page */
+
+h1 {
+	font-family: "Georgia";
+	margin-left: 75px;
+	line-height: 0.9;
+	font-weight: normal;
+	font-size: 62px;
+}
+
+h1 a {
+	text-decoration: none;
+}
+
+.title1 {
+	margin-top: 70px;
+}
+
+.title1 a {
+	color: #ff8e83;
+}
+
+.title2 a {
+	color: #5fa2ff;
+}
+
+/* Music of the moment stuff */
+
+.motm-table {
+	font-family: "Georgia";
+	margin-left: 20px;
+	line-height: 0.4;
+	font-size: 14pt;
+	margin-top: -1px;
+}
+
+.motm-table td {
+	padding: 9px;
+}
+
+.motm-table td:nth-child(2) a:link {
+	color: #e6675c;
+}
+
+.motm-table td:nth-child(2) a:visited {
+	color: #5c1546;
+}
+
+.motm-table td:nth-child(3) a {
+	text-decoration: none;
+}

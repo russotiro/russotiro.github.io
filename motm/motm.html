@@ -1,12 +1,9 @@
 ---
 layout: nav
 title: Music of the moment
-styles:
-  - motm
-  - all
 ---
 <div>
-  <table>
+  <table class="motm-table">
     {% for track in site.data.motm-table %}
       <tr>
         <td>{{ track.date }}</td>
