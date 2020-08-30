@@ -2,6 +2,12 @@
 
 body {
 	background-color: #fcfaf5;
+	margin: 38px;
+}
+
+p {
+	font-family: "Georgia";
+	font-size: 16px;
 }
 
 .home {
@@ -12,7 +18,7 @@ body {
 	border-color: #000000;
 	border-width: 5px;
 	border-radius: 4px;
-	margin: 30px;
+	margin-bottom: 27px;
 }
 
 /* 404 */
@@ -36,7 +42,7 @@ body {
 
 h1 {
 	font-family: "Georgia";
-	margin-left: 75px;
+	margin-left: 45px;
 	line-height: 0.9;
 	font-weight: normal;
 	font-size: 62px;
@@ -46,15 +52,15 @@ h1 a {
 	text-decoration: none;
 }
 
-.title1 {
+h1.first {
 	margin-top: 70px;
 }
 
-.title1 a {
+h1.first a {
 	color: #ff8e83;
 }
 
-.title2 a {
+h1.second a {
 	color: #5fa2ff;
 }
 
@@ -62,10 +68,9 @@ h1 a {
 
 .motm-table {
 	font-family: "Georgia";
-	margin-left: 20px;
 	line-height: 0.4;
 	font-size: 14pt;
-	margin-top: -1px;
+	margin-left: -10px;
 }
 
 .motm-table td {
@@ -82,4 +87,22 @@ h1 a {
 
 .motm-table td:nth-child(3) a {
 	text-decoration: none;
+}
+
+/* bike */
+
+.bike p {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.bike hr:first-child {
+	margin-top: 20px;
+}
+
+.bike iframe {
+	width: 432px;
+	margin-bottom: 15px;
+	margin-right: 15px;
+	align-items: center;
 }
