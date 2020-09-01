@@ -106,10 +106,14 @@ h1.second a {
 	margin-top: 20px;
 }
 
+.bike .embeds {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .bike iframe {
 	width: 432px;
-	height: 380px;
-	margin-bottom: 15px;
-	margin-right: 15px;
+	height: 500px;
+	margin: 10px;
 	border: solid 2px #5fa2ff;
 }
