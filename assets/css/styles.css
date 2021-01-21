@@ -64,28 +64,28 @@ h1.second a {
 	color: #5fa2ff;
 }
 
-/* Music of the moment stuff */
+/* Musical voice memos stuff */
 
-.motm-table {
+.mvm-table {
 	font-family: "Georgia";
 	line-height: 0.4;
 	font-size: 14pt;
 	margin-left: -10px;
 }
 
-.motm-table td {
+.mvm-table td {
 	padding: 9px;
 }
 
-.motm-table td:nth-child(2) a:link {
+.mvm-table td:nth-child(2) a:link {
 	color: #e6675c;
 }
 
-.motm-table td:nth-child(2) a:visited {
+.mvm-table td:nth-child(2) a:visited {
 	color: #5c1546;
 }
 
-.motm-table td:nth-child(3) a {
+.mvm-table td:nth-child(3) a {
 	text-decoration: none;
 }
 

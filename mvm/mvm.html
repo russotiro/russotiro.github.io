@@ -1,10 +1,10 @@
 ---
 layout: nav
-title: Music of the moment
+title: Musical voice memos
 ---
 <div>
-  <table class="motm-table">
-    {% for track in site.data.motm-table %}
+  <table class="mvm-table">
+    {% for track in site.data.mvm-table %}
       <tr>
         <td>{{ track.date }}</td>
         <td><a href="/assets/mus/{{ track.path }}">{{ track.title }}</a></td>
