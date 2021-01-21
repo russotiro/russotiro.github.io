@@ -1,7 +1,12 @@
 ---
 layout: default
 ---
-<div>
-  <a href="/"><img class="home" src="/assets/img/home_icon.png"></a>
+<div style="width: 100%; overflow: hidden;">
+  <div class="home">
+    <a href="/"><img src="/assets/img/home_icon.png"></a>
+  </div>
+  <div class="page-title {{ page.code }}-title">
+    <h2>{{ page.title }}</h2>
+  </div>
 </div>
 {{ content }}

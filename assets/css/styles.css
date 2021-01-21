@@ -10,7 +10,19 @@ p {
 	font-size: 16px;
 }
 
+h2 {
+	font-family: "Georgia";
+	font-weight: normal;
+	font-size: 48px;
+	line-height: 0.64;
+}
+
 .home {
+	width: 150px;
+	float: left;
+}
+
+.home img {
 	opacity: 100%;
 	width: 100px;
 	height: 100px;
@@ -20,6 +32,23 @@ p {
 	border-radius: 4px;
 	margin-bottom: 27px;
 }
+
+.page-title {
+	margin-left: 150px;
+}
+
+.potm-title {
+	color: #59d4a7;
+}
+
+.mvm-title {
+	color: #ff8e83;
+}
+
+.bike-title {
+	color: #5fa2ff;
+}
+
 
 /* 404 */
 
@@ -38,6 +67,7 @@ p {
 	line-height: 1;
 }
 
+
 /* Titles on home page */
 
 h1 {
@@ -52,17 +82,10 @@ h1 a {
 	text-decoration: none;
 }
 
-h1.first {
+.first-homepage-title {
 	margin-top: 70px;
 }
 
-h1.first a {
-	color: #ff8e83;
-}
-
-h1.second a {
-	color: #5fa2ff;
-}
 
 /* Musical voice memos stuff */
 
@@ -89,6 +112,7 @@ h1.second a {
 	text-decoration: none;
 }
 
+
 /* bike */
 
 .bike p {
@@ -99,7 +123,7 @@ h1.second a {
 .bike hr {
 	border: none;
 	height: 1px;
-	background-color: #e6675c;
+	background-color: #5fa2ff;
 }
 
 .bike hr:first-child {
