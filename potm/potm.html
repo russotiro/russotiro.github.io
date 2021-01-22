@@ -9,6 +9,8 @@ code: potm
     <h3>{{ entry.date }}</h3>
       {% if entry.date == "April 2020" %}
         <p>Error: Month did not happen</p>
+      {% elsif entry.date == "November 2020" %}
+        <p>I don't have any good pictures from this month.</p>
       {% else %}
         <img src="{{ entry.path }}">
       {% endif %}
