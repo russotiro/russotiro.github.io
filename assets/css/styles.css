@@ -17,6 +17,12 @@ h2 {
 	line-height: 0.64;
 }
 
+h3 {
+	font-family: "Georgia";
+	font-weight: normal;
+	font-size: 24px;
+}
+
 .home {
 	width: 150px;
 	float: left;
@@ -30,7 +36,6 @@ h2 {
 	border-color: #000000;
 	border-width: 5px;
 	border-radius: 4px;
-	margin-bottom: 27px;
 }
 
 .page-title {
@@ -38,7 +43,7 @@ h2 {
 }
 
 .potm-title {
-	color: #59d4a7;
+	color: #4fb889;
 }
 
 .mvm-title {
@@ -87,6 +92,21 @@ h1 a {
 }
 
 
+/* Picture of the month */
+
+.potm hr {
+	border: none;
+	height: 3px;
+	background-color: #4fb889;
+	margin-top: 30px;
+}
+
+.potm img {
+	max-width: 100%;
+	height: auto;
+}
+
+
 /* Musical voice memos stuff */
 
 .mvm-table {
@@ -124,10 +144,6 @@ h1 a {
 	border: none;
 	height: 1px;
 	background-color: #5fa2ff;
-}
-
-.bike hr:first-child {
-	margin-top: 20px;
 }
 
 .bike .embeds {
