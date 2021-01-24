@@ -12,7 +12,7 @@ code: potm
       {% elsif entry.date == "November 2020" %}
         <p>I don't have any good pictures from this month.</p>
       {% else %}
-        <img src="{{ entry.path }}">
+        <img src="/assets/img/potm/{{ entry.path }}">
       {% endif %}
     <hr>
   {% endfor %}
