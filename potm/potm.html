@@ -11,6 +11,8 @@ code: potm
         <p>Error: Month did not happen</p>
       {% elsif entry.date == "November 2020" %}
         <p>I don't have any good pictures from this month. :(</p>
+      {% elsif entry.date == "May 2021" %}
+        <a href="/assets/img/audubon collage.png"> <img src="/assets/img/potm/{{ entry.path }}"> </a>
       {% else %}
         <img src="/assets/img/potm/{{ entry.path }}">
       {% endif %}
