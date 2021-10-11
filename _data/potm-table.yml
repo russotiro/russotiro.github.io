@@ -1,4 +1,12 @@
 ---
+  - date: September 2021
+    path: Cemetery.jpg
+    link: ./sep-2021.html
+
+  - date: August 2021
+    path: Late summer late afternoon.jpg
+    link: ./aug-2021.html
+
   - date: July 2021
     path: Petrified swamp.jpg
 
@@ -7,6 +15,7 @@
 
   - date: May 2021
     path: Audubon.jpg
+    link: ./may-2021.html
 
   - date: April 2021
     path: Sprinklers.jpg
