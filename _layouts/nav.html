@@ -2,11 +2,14 @@
 layout: default
 ---
 <div style="width: 100%; overflow: hidden; margin-bottom: 30px;">
-  <div class="home">
-    <a href="/"><img src="/assets/img/home_icon.png"></a>
-  </div>
-  <div class="page-title {{ page.code }}-title">
-    <h2>{{ page.title }}</h2>
-  </div>
+    <div class="home">
+        <a href="/"><img src="/assets/img/home_icon.png"></a>
+    </div>
+    <div class="page-title {{ page.code }}-title">
+        <h2>{{ page.title }}</h2>
+    </div>
+</div>
+<div class="{{ page.code }}">
+    <hr id="top-line">
 </div>
 {{ content }}
