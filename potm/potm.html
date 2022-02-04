@@ -5,7 +5,7 @@ code: potm
 ---
 <div class="potm">
     {% for entry in site.data.potm-table %}
-        <h3>{{ entry.date }}</h3>
+        <h4>{{ entry.date }}</h4>
         {% if entry.date == "April 2020" %}
             <p>Error: Month did not happen</p>
         {% elsif entry.date == "November 2020" %}
