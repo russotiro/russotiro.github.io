@@ -114,13 +114,23 @@ h1 a {
     background-color: #a08ee8;
 }
 
-.blog-header {
-    display: inline;
-}
-
 p.blog-header {
     font-style: italic;
     color: #777;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+h3.blog-header {
+    margin-bottom: 12px;
+}
+
+#date-line {
+    width: 227px;
+    margin: 0px 0px 20px 0px;
+    height: 1.5px;
+    background-color: #999;
+    border: none;
 }
 
 
@@ -128,7 +138,7 @@ p.blog-header {
 
 .potm hr {
 	border: none;
-	height: 3px;
+	height: 2.5px;
 	background-color: #4fb889;
 	margin-top: 30px;
 }
@@ -147,6 +157,29 @@ p.blog-header {
     margin-left: auto;
     margin-right: auto;
     display: block;
+}
+
+.see-more {
+    display: block;
+    font-family: Georgia;
+    text-align: center;
+    font-size: 18px;
+    color: #000;
+    background-color: #ccc;
+    border-radius: 20px;
+    width: 200px;
+    margin: 40px auto;
+    padding: 12px;
+    transition: 0.3s;
+}
+
+.see-more:hover {
+    background-color: #4fb889;
+    color: #fcfaf5;
+}
+
+a.hide-link {
+    text-decoration: none;
 }
 
 

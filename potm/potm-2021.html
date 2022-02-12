@@ -1,0 +1,22 @@
+---
+layout: nav
+title: Picture of the month
+code: potm
+---
+<div class="potm">
+    {% for entry in site.data.potm/potm-table-2021 %}
+        <h4>{{ entry.date }}</h4>
+        {% if entry.link %}
+            <a href="{{ entry.link }}">
+        {% endif %}
+
+        <img src="/assets/img/potm/{{ entry.path }}">
+
+        {% if entry.link %}
+            </a>
+        {% endif %}
+        <hr>
+    {% endfor %}
+</div>
+
+<a class="hide-link see-more" href="./potm-2020.html">See more pictures&hellip;</a>

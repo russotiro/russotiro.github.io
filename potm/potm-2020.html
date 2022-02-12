@@ -4,22 +4,14 @@ title: Picture of the month
 code: potm
 ---
 <div class="potm">
-    {% for entry in site.data.potm-table %}
+    {% for entry in site.data.potm/potm-table-2020 %}
         <h4>{{ entry.date }}</h4>
         {% if entry.date == "April 2020" %}
-            <p>Error: Month did not happen</p>
+            <p>Did this month even really happen?</p>
         {% elsif entry.date == "November 2020" %}
             <p>I don't have any good pictures from this month. :(</p>
         {% else %}
-            {% if entry.link %}
-                <a href="{{ entry.link }}">
-            {% endif %}
-
             <img src="/assets/img/potm/{{ entry.path }}">
-
-            {% if entry.link %}
-                </a>
-            {% endif %}
         {% endif %}
         <hr>
     {% endfor %}
