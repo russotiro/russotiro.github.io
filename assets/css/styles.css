@@ -5,7 +5,7 @@ body {
 	margin: 38px;
 }
 
-p {
+p,li {
 	font-family: "Georgia";
 	font-size: 16px;
 }
@@ -27,6 +27,10 @@ h4 {
 	font-family: "Georgia";
 	font-weight: normal;
 	font-size: 24px;
+}
+
+li {
+    line-height: 26px;
 }
 
 .home {
@@ -114,6 +118,13 @@ h1 a {
     background-color: #a08ee8;
 }
 
+hr.mid-blog {
+    background-color: #a08ee8;
+    height: 2.5px;
+    border: none;
+    margin-top: 30px;
+}
+
 p.blog-header {
     font-style: italic;
     color: #777;
@@ -131,6 +142,11 @@ h3.blog-header {
     height: 1.5px;
     background-color: #999;
     border: none;
+}
+
+.footnote {
+    font-family: Georgia, serif;
+    font-size: 11px;
 }
 
 
