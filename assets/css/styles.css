@@ -144,6 +144,7 @@ h3.blog-header {
     border-style: solid;
     border-color: #999;
     display: inline-block;
+    margin-top: -6px;
 }
 
 .footnote {
