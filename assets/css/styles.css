@@ -137,11 +137,13 @@ h3.blog-header {
 }
 
 #date-line {
-    width: 227px;
-    margin: 0px 0px 20px 0px;
-    height: 1.5px;
-    background-color: #999;
-    border: none;
+    border-bottom: 2px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+    border-color: #999;
+    display: inline-block;
 }
 
 .footnote {
