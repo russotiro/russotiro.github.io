@@ -1,4 +1,9 @@
 ---
+  - date: 2.17.22
+    title: Three-chord vamp
+    path: The three chord vamp.m4a
+    ref: ./three-chord-vamp/
+
   - date: 5.1.21
     title: "Trying to Feel Alive attempt #1"
     path: Trying to feel alive.m4a
