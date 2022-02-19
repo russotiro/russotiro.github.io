@@ -4,9 +4,7 @@ title: Picture of the month
 code: potm
 ---
 <div class="potm">
-    <p>Some months have bonus pictures. Click a month's picture to access its bonus page, if it exists!</p>
-    <hr style="height: 2.5px; margin-top: 25px">
-    {% for entry in site.data.potm/potm-table-2022 %}
+    {% for entry in site.data.potm/potm-table-2021 %}
         <h4>{{ entry.date }}</h4>
         {% if entry.link %}
             <a href="{{ entry.link }}">
@@ -21,4 +19,4 @@ code: potm
     {% endfor %}
 </div>
 
-<a class="hide-link see-more" href="./potm-2021.html">See more pictures&hellip;</a>
+<a class="hide-link see-more" href="../2020/">See more pictures&hellip;</a>

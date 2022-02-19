@@ -60,6 +60,10 @@ li {
 	color: #4fb889;
 }
 
+.obsession-title {
+    color: #f5c951;
+}
+
 .mvm-title {
 	color: #ff8e83;
 }
@@ -199,6 +203,45 @@ h3.blog-header {
 
 a.hide-link {
     text-decoration: none;
+}
+
+
+/* obsession */
+
+.obsession hr {
+    background-color: #f5c951;
+    height: 2px;
+    border: none;
+}
+
+.obsession hr.divider {
+    margin: 20px 0px 50px 0px;
+}
+
+.the-obsession {
+    background-color: #f5c951;
+    border-radius: 20px;
+    display: block;
+    text-align: center;
+    padding: 50px;
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+.the-art {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.the-info {
+    margin-bottom: -20px;
+}
+
+.the-info p {
+    font-family: Century, serif;
 }
 
 
