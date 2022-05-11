@@ -208,6 +208,10 @@ a.hide-link {
 
 /* obsession */
 
+.obsession h3 {
+    text-align: center;
+}
+
 .obsession hr {
     background-color: #f5c951;
     height: 2px;
@@ -242,6 +246,24 @@ a.hide-link {
 
 .the-info p {
     font-family: Century, serif;
+}
+
+table.obsession-table {
+    font-family: Georgia;
+    margin: auto;
+    margin-top: 40px;
+}
+
+table.obsession-table a {
+    display: block;
+}
+
+table.obsession-table img {
+    width: 50px;
+}
+
+table.obsession-table td {
+    padding: 4px 8px;
 }
 
 
