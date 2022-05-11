@@ -245,7 +245,7 @@ a.hide-link {
 }
 
 .the-info p {
-    font-family: Century, serif;
+    font-family: "Century Schoolbook", Century, serif;
 }
 
 table.obsession-table {
@@ -264,6 +264,7 @@ table.obsession-table img {
 
 table.obsession-table td {
     padding: 4px 8px;
+    font-family: "Century Schoolbook", Georgia, serif;
 }
 
 
