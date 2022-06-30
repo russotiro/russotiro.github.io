@@ -22,13 +22,15 @@ metadata = []
 patterns = [r"(?<=<a href=\")\S+(?=\")",
             r"(?<=class=\"the\-art\" src=\")\S+(?=\")",
             r"(?<=&#8220;).+(?=&#8221;)",
-            r"(?<=<p>by ).+(?=</p>)",
-            r"(?<=<p>from <em>).+(?=</em>)",
-            r"(?<=</em> \()\d{4}(?=\)</p>)",
-            r"(?<=</div>\n {8}<!\-\- ).+(?= \-\->)"]
+            r"(?<=<p>by ).+(?=<\/p>)",
+            r"(?<=<p>from <em>).+(?=<\/em>)",
+            r"(?<=<\/em> \()\d{4}(?=\)<\/p>)",
+            r"(?<=<\/div>\n {8}<!\-\- ).+(?= \-\->)"]
 patterns = map(re.compile, patterns)
 
 
+###########################
+# now actually do the stuff
 
 with open("index.html", "r") as file:
     contents = file.read()
@@ -36,7 +38,7 @@ with open("index.html", "r") as file:
 
 # replace fields in the-obsession
 for pattern, field in zip(patterns, argv[1:8]):
-    metadata.append(pattern.search(contents))
+    metadata.append(pattern.search(contents).group())
     contents = pattern.sub(field, contents, 1)
 
 # add new entry to bottom section
@@ -49,6 +51,9 @@ entry = f"""
             <td>{metadata[5]}</td>
             <td>{metadata[6]}</td>
         </tr>"""
+
+index = re.search(r"(?<=<\/th>\n {8}<\/tr>)\n", contents).span()[0]
+contents = contents[:index] + entry + contents[index:]
 
 
 with open("index.html", "w") as file:
