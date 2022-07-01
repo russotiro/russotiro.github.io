@@ -10,7 +10,11 @@ argv[4] == Artist
 argv[5] == Album
 argv[6] == Year
 """
-assert len(argv) == 7
+try: 
+    assert len(argv) == 7
+except AssertionError:
+    print("Usage: python update_obsession.py <song URL> <album art URL> <song title> <artist> <album> <year>")
+    exit(1)
 
 # append current date to argv
 argv.append(date.today().strftime("%B %#d, %Y"))
