@@ -1,27 +1,64 @@
 from datetime import date
 import re
 from sys import argv
+import glob
+import os
+from PIL import Image
+
+# Known bugs:
+# - if artist_album is the same as a previous entry, album art will be overwritten
+
 
 """
 argv[1] == song link
-argv[2] == image link
-argv[3] == Title
-argv[4] == Artist
-argv[5] == Album
-argv[6] == Year
+argv[2] == Title
+argv[3] == Artist
+argv[4] == Album
+argv[5] == Year
 """
 try: 
-    assert len(argv) == 7
+    assert len(argv) == 6
 except AssertionError:
-    print("Usage: python update_obsession.py <song URL> <album art URL> <song title> <artist> <album> <year>")
+    usage = """Usage: python update_obsession.py <song URL> <song title> <artist> <album> <year>
+The album art must be the most recently downloaded file in your Downloads folder."""
+    print(usage)
     exit(1)
 
-# append current date to argv
-argv.append(date.today().strftime("%B %#d, %Y"))
 
-# patterns[0:5] are the regex patterns corresponding to argv[1:6]
-# metadata[0:5] are the Match objects with actual strings corresponding to argv[1:6]
-# metadata[6] and argv[7] are the date I put it on my website & the pattern to detect that
+##################
+# helper functions
+
+def album_art_link(new_info: list[str]):
+    local_art_path = "/assets/img/obsession/"
+    local_art_path += new_info[2] + "_" + new_info[3]
+    local_art_path = local_art_path.lower().replace(" ", "_")
+
+    list_of_files = glob.glob("C:/Users/russo/Downloads/*")
+    temp_art_path = max(list_of_files, key=os.path.getctime)
+    art = Image.open(temp_art_path)
+    art = art.resize((400, 400), Image.Resampling.LANCZOS)
+
+    file_ext = re.compile(r"\.\w+$").search(temp_art_path).group()
+    local_art_path += file_ext
+    new_art_path = "C:/Users/russo/Documents/GitHub/russotiro.github.io" + local_art_path
+    art.save(fp=new_art_path)
+    os.remove(temp_art_path)
+
+    return local_art_path
+
+
+##################
+# more setup stuff
+
+new_info = argv[1:]
+
+# append current date to new_info. insert link to album art in new_info
+new_info.append(date.today().strftime("%B %#d, %Y"))
+new_info.insert(1, album_art_link(new_info))
+
+# patterns[0:5] are the regex patterns corresponding to new_info[0:5]
+# metadata[0:5] are the Match objects with actual strings corresponding to new_info[0:5]
+# metadata[6] and new_info[6] are the date I put it on my website & the pattern to detect that
 metadata = []
 patterns = [r"(?<=<a href=\")\S+(?=\")",
             r"(?<=class=\"the\-art\" src=\")\S+(?=\")",
@@ -41,7 +78,7 @@ with open("index.html", "r") as file:
 
 
 # replace fields in the-obsession
-for pattern, field in zip(patterns, argv[1:8]):
+for pattern, field in zip(patterns, new_info[0:7]):
     metadata.append(pattern.search(contents).group())
     contents = pattern.sub(field, contents, 1)
 
