@@ -167,8 +167,14 @@ h3.blog-header {
 }
 
 .potm img {
-	max-width: 100%;
-	height: auto;
+    width: 80%;
+    margin: auto;
+    display: block;
+}
+
+.potm h4 {
+    text-align: center;
+    display: block;
 }
 
 .bonus p {
