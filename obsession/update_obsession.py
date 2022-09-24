@@ -31,7 +31,7 @@ The album art must be the most recently downloaded file in your Downloads folder
 def album_art_link(new_info: list[str]):
     local_art_path = "/assets/img/obsession/"
     local_art_path += new_info[2] + "_" + new_info[3]
-    local_art_path = local_art_path.lower().replace(" ", "_")
+    local_art_path = local_art_path.lower().replace(" ", "_").replace(":", "_")
 
     list_of_files = glob.glob("C:/Users/russo/Downloads/*")
     temp_art_path = max(list_of_files, key=os.path.getctime)
