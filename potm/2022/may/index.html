@@ -5,10 +5,15 @@ code: potm
 ---
 <style>
 
-    .potm img.emerald {
-    	height: 1000px;
-    	width: auto;
-    	margin-right: 50px;
+    .potm .emerald {
+    	display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .potm .emerald img {
+        width: 45%;
+        max-width: 350px;
     }
 
     img.vertical {
@@ -26,9 +31,11 @@ code: potm
     <img src="/assets/img/potm/bonus/beachmont.jpg">
     <hr>
 
-    <p>Here are a few photos from when I visited the Emerald Necklace on my way home from college halfway through the month:</p>
-    <img class="emerald" style="display: inline-block" src="/assets/img/potm/bonus/emerald necklace pond.jpg">
-    <img class="emerald" src="/assets/img/potm/bonus/emerald necklace trees.jpg">
+    <p>Here are a couple photos from when I visited the Emerald Necklace on my way home from college halfway through the month:</p>
+    <div class="emerald">
+        <img src="/assets/img/potm/bonus/emerald necklace pond.jpg">
+        <img src="/assets/img/potm/bonus/emerald necklace trees.jpg">
+    </div>
     <hr>
 
     <p>Until May 23, our screened-in porch looked pretty much the exact same since we moved in 18 years ago. I took a picture of the porch after the screens were taken out, and new ones were put in the next day!</p>
