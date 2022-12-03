@@ -23,8 +23,12 @@ code: potm
             <a href="{{ entry.link }}">
         {% endif %}
 
-        <img src="/assets/img/potm/{{ entry.path }}">
-
+        {% if entry.date == "November 2022" %}
+            <img src="/assets/img/potm/{{ entry.path }}" style="width: 60%;">
+        {% else %}
+            <img src="/assets/img/potm/{{ entry.path }}">
+        {% endif %}
+        
         {% if entry.link %}
             </a>
         {% endif %}
