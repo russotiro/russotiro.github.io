@@ -33,14 +33,14 @@ def album_art_link(new_info: list[str]):
     local_art_path += new_info[2] + "_" + new_info[3]
     local_art_path = local_art_path.lower().replace(" ", "_").replace(":", "_")
 
-    list_of_files = glob.glob("C:/Users/russo/Downloads/*")
+    list_of_files = glob.glob("D:/Users/Russell/Downloads/*")
     temp_art_path = max(list_of_files, key=os.path.getctime)
     art = Image.open(temp_art_path)
     art = art.resize((400, 400), Image.Resampling.LANCZOS)
 
     file_ext = re.compile(r"\.\w+$").search(temp_art_path).group()
     local_art_path += file_ext
-    new_art_path = "C:/Users/russo/Documents/GitHub/russotiro.github.io" + local_art_path
+    new_art_path = "C:/Users/RussellS/Documents/GitHub/website/russotiro.github.io" + local_art_path
     art.save(fp=new_art_path)
     os.remove(temp_art_path)
 
