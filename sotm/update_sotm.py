@@ -19,7 +19,7 @@ argv[5] == Year
 try: 
     assert len(argv) == 6
 except AssertionError:
-    usage = """Usage: python update_obsession.py <song URL> <song title> <artist> <album> <year>
+    usage = """Usage: python update_sotm.py <song URL> <song title> <artist> <album> <year>
 The album art must be the most recently downloaded file in your Downloads folder."""
     print(usage)
     exit(1)
@@ -29,7 +29,7 @@ The album art must be the most recently downloaded file in your Downloads folder
 # helper functions
 
 def album_art_link(new_info: list[str]):
-    local_art_path = "/assets/img/obsession/"
+    local_art_path = "/assets/img/sotm/"
     local_art_path += new_info[2] + "_" + new_info[3]
     local_art_path = local_art_path.lower().replace(" ", "_").replace(":", "_")
 
@@ -77,7 +77,7 @@ with open("index.html", "r") as file:
     contents = file.read()
 
 
-# replace fields in the-obsession
+# replace fields in the-sotm
 for pattern, field in zip(patterns, new_info[0:7]):
     metadata.append(pattern.search(contents).group())
     contents = pattern.sub(field, contents, 1)
@@ -85,7 +85,7 @@ for pattern, field in zip(patterns, new_info[0:7]):
 # add new entry to bottom section
 entry = f"""
         <tr>
-            <td><a href="{metadata[0]}"><img src="{metadata[1]}" alt="Album art for obsession"></a></td>
+            <td><a href="{metadata[0]}"><img src="{metadata[1]}" alt="Album art for sotm"></a></td>
             <td>{metadata[2]}</td>
             <td>{metadata[3]}</td>
             <td><em>{metadata[4]}</em></td>

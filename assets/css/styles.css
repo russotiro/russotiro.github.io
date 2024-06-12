@@ -60,7 +60,7 @@ li {
 	color: #4fb889;
 }
 
-.obsession-title {
+.sotm-title {
     color: #f5c951;
 }
 
@@ -212,23 +212,23 @@ a.hide-link {
 }
 
 
-/* obsession */
+/* sotm */
 
-.obsession h3 {
+.sotm h3 {
     text-align: center;
 }
 
-.obsession hr {
+.sotm hr {
     background-color: #f5c951;
     height: 2px;
     border: none;
 }
 
-.obsession hr.divider {
+.sotm hr.divider {
     margin: 20px 0px 50px 0px;
 }
 
-.the-obsession {
+.the-sotm {
     background-color: #f5c951;
     border-radius: 20px;
     display: block;
@@ -254,21 +254,21 @@ a.hide-link {
     font-family: "Century Schoolbook", Century, serif;
 }
 
-table.obsession-table {
+table.sotm-table {
     font-family: Georgia;
     margin: auto;
     margin-top: 40px;
 }
 
-table.obsession-table a {
+table.sotm-table a {
     display: block;
 }
 
-table.obsession-table img {
+table.sotm-table img {
     width: 50px;
 }
 
-table.obsession-table td {
+table.sotm-table td {
     padding: 4px 8px;
     font-family: "Century Schoolbook", Georgia, serif;
 }
