@@ -28,21 +28,20 @@ The album art must be the most recently downloaded file in your Downloads folder
 ##################
 # helper functions
 
+art_root = "C:/Users/russo/Documents/GitHub/russotiro.github.io"
+
 def album_art_link(new_info: list[str]):
     local_art_path = "/assets/img/sotm/"
     local_art_path += new_info[2] + "_" + new_info[3]
     local_art_path = local_art_path.lower().replace(" ", "_").replace(":", "_")
 
-    list_of_files = glob.glob("D:/Users/Russell/Downloads/*")
+    list_of_files = glob.glob("C:/Users/russo/Downloads/*")
     temp_art_path = max(list_of_files, key=os.path.getctime)
-    art = Image.open(temp_art_path)
-    art = art.resize((400, 400), Image.Resampling.LANCZOS)
 
     file_ext = re.compile(r"\.\w+$").search(temp_art_path).group()
     local_art_path += file_ext
-    new_art_path = "C:/Users/RussellS/Documents/GitHub/website/russotiro.github.io" + local_art_path
-    art.save(fp=new_art_path)
-    os.remove(temp_art_path)
+    new_art_path = art_root + local_art_path
+    os.rename(temp_art_path, new_art_path)
 
     return local_art_path
 
@@ -76,11 +75,15 @@ patterns = map(re.compile, patterns)
 with open("index.html", "r") as file:
     contents = file.read()
 
-
 # replace fields in the-sotm
 for pattern, field in zip(patterns, new_info[0:7]):
     metadata.append(pattern.search(contents).group())
     contents = pattern.sub(field, contents, 1)
+
+# resize old art
+art = Image.open(art_root + metadata[1])
+art = art.resize((256, 256), Image.Resampling.LANCZOS)
+art.save(fp=art_root + metadata[1])
 
 # add new entry to bottom section
 entry = f"""
@@ -95,7 +98,6 @@ entry = f"""
 
 index = re.search(r"(?<=<\/th>\n {8}<\/tr>)\n", contents).span()[0]
 contents = contents[:index] + entry + contents[index:]
-
 
 with open("index.html", "w") as file:
     file.write(contents)

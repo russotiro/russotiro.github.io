@@ -3,17 +3,6 @@ layout: nav
 title: Picture of the month
 code: potm
 ---
-<style>
-    .potm img {
-        width: 80%;
-        margin: auto;
-        display: block;
-    }
-    h4 {
-        text-align: center;
-        display: block;
-    }
-</style>
 <div class="potm">
     {% for entry in site.data.potm/potm-table-2022 %}
         <h4>{{ entry.date }}</h4>
