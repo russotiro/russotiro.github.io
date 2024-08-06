@@ -28,14 +28,14 @@ The album art must be the most recently downloaded file in your Downloads folder
 ##################
 # helper functions
 
-art_root = "C:/Users/russo/Documents/GitHub/russotiro.github.io"
+art_root = "/Users/russellsotiropoulos/Documents/GitHub/russotiro.github.io"
 
 def album_art_link(new_info: list[str]):
     local_art_path = "/assets/img/sotm/"
     local_art_path += new_info[2] + "_" + new_info[3]
     local_art_path = local_art_path.lower().replace(" ", "_").replace(":", "_")
 
-    list_of_files = glob.glob("C:/Users/russo/Downloads/*")
+    list_of_files = glob.glob("/Users/russellsotiropoulos/Downloads/*")
     temp_art_path = max(list_of_files, key=os.path.getctime)
 
     file_ext = re.compile(r"\.\w+$").search(temp_art_path).group()
@@ -52,7 +52,7 @@ def album_art_link(new_info: list[str]):
 new_info = argv[1:]
 
 # append current date to new_info. insert link to album art in new_info
-new_info.append(date.today().strftime("%B %#d, %Y"))
+new_info.append(date.today().strftime("%B %-d, %Y"))
 new_info.insert(1, album_art_link(new_info))
 
 # patterns[0:5] are the regex patterns corresponding to new_info[0:5]
