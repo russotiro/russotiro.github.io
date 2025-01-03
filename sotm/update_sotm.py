@@ -10,6 +10,7 @@ from PIL import Image
 
 
 """
+source ~/.venv/bin/activate
 argv[1] == song link
 argv[2] == Title
 argv[3] == Artist
