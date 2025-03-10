@@ -206,6 +206,14 @@ a.hide-link {
     text-decoration: none;
 }
 
+.potm table, td {
+    border: #4fb889 3px solid;
+    border-collapse: collapse;
+}
+
+.potm table.sotm-table {
+    margin: auto;
+}
 
 /* sotm */
 
