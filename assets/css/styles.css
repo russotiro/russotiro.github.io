@@ -206,7 +206,7 @@ a.hide-link {
     text-decoration: none;
 }
 
-.potm table, td {
+.potm table, .potm td {
     border: #4fb889 3px solid;
     border-collapse: collapse;
 }
