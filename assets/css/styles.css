@@ -215,6 +215,17 @@ a.hide-link {
     margin: auto;
 }
 
+.potm .horizontal-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.potm .horizontal-stack img {
+    width: 49%;
+    max-width: 350px;
+}
+
 /* sotm */
 
 .sotm h3 {
